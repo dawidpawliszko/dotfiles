@@ -25,6 +25,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-commentary'
 
 "...All your other bundles...
 if iCanHazVundle == 0
@@ -88,10 +90,3 @@ function! ShowFileInNERDTree()
   endif
 endfunction
 map <leader>d :call ShowFileInNERDTree()<cr>
-
-
-
-
-
-
-

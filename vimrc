@@ -27,6 +27,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-commentary'
+Bundle 'juvenn/mustache.vim'
 
 "...All your other bundles...
 if iCanHazVundle == 0
@@ -90,3 +91,4 @@ function! ShowFileInNERDTree()
   endif
 endfunction
 map <leader>d :call ShowFileInNERDTree()<cr>
+map <F2> :NERDTreeToggle<cr>

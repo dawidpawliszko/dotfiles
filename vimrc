@@ -88,6 +88,13 @@ endfunction
 map <leader>d :call ShowFileInNERDTree()<cr>
 map <F2> :NERDTreeToggle<cr>
 
+"" default grep options
+set grepprg=grep\ -nR\ --exclude=*~\ $*\ /dev/null
+
+"" move swap files to /tmp
+set dir-=.
+set dir+=/tmp
+
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif

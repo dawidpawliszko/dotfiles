@@ -28,6 +28,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-commentary'
 Bundle 'juvenn/mustache.vim'
+Bundle 'thoughtbot/vim-rspec'
 
 "...All your other bundles...
 if iCanHazVundle == 0
@@ -54,13 +55,7 @@ set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
 set list
 
-" Colorscheme
-if $COLORTERM == 'mate-terminal' 
-  set term=gnome-256color
-  colorscheme railscasts
-else
-  colorscheme default
-endif
+colorscheme railscasts
 
 "" Whitespace
 set nowrap                      " don't wrap lines
@@ -92,3 +87,7 @@ function! ShowFileInNERDTree()
 endfunction
 map <leader>d :call ShowFileInNERDTree()<cr>
 map <F2> :NERDTreeToggle<cr>
+
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif

@@ -29,6 +29,8 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-commentary'
 Bundle 'juvenn/mustache.vim'
 Bundle 'thoughtbot/vim-rspec'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'derekwyatt/vim-scala'
 
 "...All your other bundles...
 if iCanHazVundle == 0
@@ -87,6 +89,8 @@ function! ShowFileInNERDTree()
 endfunction
 map <leader>d :call ShowFileInNERDTree()<cr>
 map <F2> :NERDTreeToggle<cr>
+"" JSONIZE
+com! JSONize %!python -m json.tool
 
 "" default grep options
 set grepprg=grep\ -nR\ --exclude=*~\ $*\ /dev/null
